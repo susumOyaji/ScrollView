@@ -1,14 +1,93 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ScrollView"
              x:Class="ScrollView.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
 
-</ContentPage>
+
+    <!--iOSの場合は上部に余白を設ける-->
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0"/>
+    </ContentPage.Padding>
+
+
+    <!--タブ1ページ目-->
+    <ContentPage Title="Tab1">
+        <!-- 全体レイアウト-->
+        <StackLayout Orientation="Vertical">
+
+            <ScrollView Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
+                    <Label Text="sample" TextColor="Blue"  BackgroundColor="Orange"/>
+
+                    <Button Text="SampleButton" TextColor="White" BackgroundColor="Black"/>
+
+                    <Button Text="SampleButton" BackgroundColor="Blue"/>
+
+                    <Button Text="SampleButton" BackgroundColor="YellowGreen"/>
+
+
+
+
+                </StackLayout>
+            </ScrollView>
+
+        </StackLayout>
+    </ContentPage>
+
+    <!--タブ2ページ目-->
+    <ContentPage Title="Tab2">
+        <!-- 全体レイアウト-->
+        <StackLayout Orientation="Vertical">
+
+            <ScrollView Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
+                    <Label Text="sample" TextColor="Blue"  BackgroundColor="Orange"/>
+
+                    <Button Text="SampleButton" TextColor="White" BackgroundColor="Black"/>
+
+                    <Button Text="SampleButton" BackgroundColor="Blue"/>
+
+                    <Button Text="SampleButton" BackgroundColor="YellowGreen"/>
+
+
+
+
+                </StackLayout>
+            </ScrollView>
+
+        </StackLayout>
+    </ContentPage>
+
+    <!--タブ3ページ目-->
+    <ContentPage Title="Tab3">
+        <!-- 全体レイアウト-->
+        <StackLayout Orientation="Vertical">
+
+            <ScrollView Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
+                    <Label Text="sample" TextColor="Blue"  BackgroundColor="Orange"/>
+
+                    <Button Text="SampleButton" TextColor="White" BackgroundColor="Black"/>
+
+                    <Button Text="SampleButton" BackgroundColor="Blue"/>
+
+                    <Button Text="SampleButton" BackgroundColor="YellowGreen"/>
+
+
+
+
+                </StackLayout>
+            </ScrollView>
+
+        </StackLayout>
+
+    </ContentPage>
+        
+
+    <ContentPage>
+
+       
+    </ContentPage>
+</TabbedPage>
