@@ -13,5 +13,11 @@ namespace ScrollView
 		{
 			InitializeComponent();
 		}
-	}
+
+        public void OnClick(object sender, EventArgs e)
+        {
+            DisplayAlert("Seleted", ((ToolbarItem)sender).Name, "OK");
+        }
+
+    }
 }

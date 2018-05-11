@@ -11,15 +11,54 @@
         <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0"/>
     </ContentPage.Padding>
 
-
+   
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Menu1" Activated="OnClick" Order="Primary" Priority="1" Icon="Menu1.png"/>
+        <ToolbarItem Name="Menu2" Activated="OnClick" Order="Primary" Priority="1" Icon="Menu2.png"/>
+        <ToolbarItem Name="Menu3" Activated="OnClick" Order="Primary" Priority="1" Icon="Menu3.png"/>
+        <ToolbarItem Name="Menu4" Activated="OnClick" Order="Primary" Priority="1" Icon="Menu4.png"/>
+        <ToolbarItem Name="Menu5" Activated="OnClick" Order="Secondary" Priority="1" Icon="Menu5.png"/>
+    </ContentPage.ToolbarItems>
+    <!--
+    <ContentPage>
+        <Frame OutlineColor="Red" HasShadow="True" HeightRequest="20">
+            
+            
+        </Frame>
+     </ContentPage>-->
     <!--タブ1ページ目-->
     <ContentPage Title="Tab1">
         <!-- 全体レイアウト-->
         <StackLayout Orientation="Vertical">
 
-            <ScrollView Orientation="Horizontal">
+            <ScrollView Orientation="Horizontal" HeightRequest="30">
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
                     <Label Text="sample" TextColor="Blue"  BackgroundColor="Orange"/>
+
+                    <Button Text="TAB1SampleButton" TextColor="White" WidthRequest="50" BackgroundColor="Black"/>
+
+                    <Button Text="TAB1SampleButton" BackgroundColor="Blue"/>
+
+                    <Button Text="TAB1SampleButton" BackgroundColor="YellowGreen"/>
+
+                    <Button Text="TAB1SampleButton" TextColor="White" BackgroundColor="Black"/>
+
+                    <Button Text="TAB1SampleButton" BackgroundColor="Blue"/>
+
+                    <Button Text="TAB1SampleButton" BackgroundColor="YellowGreen"/>
+
+                </StackLayout>
+            </ScrollView>
+
+            <ScrollView Orientation="Vertical">
+                <StackLayout>
+                    <Label Text="sample" TextColor="Blue"  BackgroundColor="Orange"/>
+
+                    <Button Text="SampleButton" TextColor="White" WidthRequest="50" BackgroundColor="Black"/>
+
+                    <Button Text="SampleButton" BackgroundColor="Blue"/>
+
+                    <Button Text="SampleButton" BackgroundColor="YellowGreen"/>
 
                     <Button Text="SampleButton" TextColor="White" BackgroundColor="Black"/>
 
@@ -27,10 +66,21 @@
 
                     <Button Text="SampleButton" BackgroundColor="YellowGreen"/>
 
+                    <Label Text="sample" TextColor="Blue"  BackgroundColor="Orange"/>
 
+                    <Button Text="SampleButton" TextColor="White" WidthRequest="50" BackgroundColor="Black"/>
 
+                    <Button Text="SampleButton" BackgroundColor="Blue"/>
 
+                    <Button Text="SampleButton" BackgroundColor="YellowGreen"/>
+
+                    <Button Text="SampleButton" TextColor="White" BackgroundColor="Black"/>
+
+                    <Button Text="SampleButton" BackgroundColor="Blue"/>
+
+                    <Button Text="SampleButton" BackgroundColor="YellowGreen"/>
                 </StackLayout>
+                
             </ScrollView>
 
         </StackLayout>
