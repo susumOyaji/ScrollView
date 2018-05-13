@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ScrollView"
+             x:Class="ScrollView.MainPage">
+
+
+
+    <!--iOSの場合は上部に余白を設ける-->
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0"/>
+    </ContentPage.Padding>
+
+
+    <!--
+    <TabbedPage.Resources>
+    <ResourceDictionary>
+      <local:NonNullToBooleanConverter x:Key="booleanConverter" />
+    </ResourceDictionary>
+    </TabbedPage.Resources>
+    -->
+
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="PageBackgroundColor">Blue</Color>
+            <Color x:Key="NormalTextColor">Yellow</Color>
+            <x:String x:Key="StackHeight">50</x:String>>>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+   
+    <ContentPage.ToolbarItems >
+        <ToolbarItem Name="Menu1" Activated="OnClick" Order="Primary" Priority="2" Icon="Menu1.png" />
+        <ToolbarItem Name="Menu2" Activated="OnClick" Order="Primary" Priority="1" Icon="Menu2.png"/>
+        <ToolbarItem Name="Menu3" Activated="OnClick" Order="Primary" Priority="3" Icon="Menu3.png"/>
+        <ToolbarItem Name="Menu4" Activated="OnClick" Order="Secondary" Priority="1" Icon="Menu4.png"/>
+        <ToolbarItem Name="Menu5" Activated="OnClick" Order="Secondary" Priority="1" Icon="Menu5.png"/>
+    </ContentPage.ToolbarItems>
+
+
+
+
+
+
+
+    
+    <!--タブ1ページ目-->
+  <TabbedPage.ItemTemplate> 
+    <DataTemplate>
+        <ContentPage Title="{Binding Name}"> 
+            <ScrollView>
+             <StackLayout Orientation="Vertical" BackgroundColor="Blue">       
+                 <!-- 値上り率　ランキング -->   
+                 <Frame OutlineColor="Blue">    
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" Padding="0" HeightRequest="{StaticResource StackHeight}">
+                        <Grid VerticalOptions="Start" RowSpacing="0">
+                            <!-- 行の定義 -->
+                            <Grid.RowDefinitions Grid.RowSpan="0">
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>    
+                            </Grid.RowDefinitions>
+                            <!-- 列の定義 -->
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                       
+                            <Label Grid.Row="0" Grid.Column="0" Text="値上り" BackgroundColor="White"/>
+                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Subfamily}"/>
+                            <Label Grid.Row="0" Grid.Column="2" Text="{Binding Tribe}"/>
+                            <Label Grid.Row="1" Grid.Column="0" Text="{Binding Family}"/>
+                            <Label Grid.Row="1" Grid.Column="1" Text="{Binding Subfamily}"/>
+                            <Label Grid.Row="1" Grid.Column="2" Text="{Binding Tribe}"/>
+
+                        </Grid>
+                   </StackLayout>
+                 </Frame>
+                    
+                 <!-- 出来高　ランキング -->   
+                 <Frame OutlineColor="Blue">    
+                    <StackLayout Orientation="Vertical">
+                        <Grid HorizontalOptions="CenterAndExpand">
+                            <!-- 行の定義 -->
+                            <Grid.RowDefinitions Grid.RowSpan="0">
+                                <RowDefinition Height="50*"/>
+                                <RowDefinition Height="50*"/>    
+                            </Grid.RowDefinitions>
+                            <!-- 列の定義 -->
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                       
+                            <Label Grid.Row="0" Grid.Column="0" Text="出来高" BackgroundColor="White"/>
+                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Subfamily}"/>
+                            <Label Grid.Row="0" Grid.Column="2" Text="{Binding Tribe}"/>
+                            <Label Grid.Row="1" Grid.Column="0" Text="{Binding Family}"/>
+                            <Label Grid.Row="1" Grid.Column="1" Text="{Binding Subfamily}"/>
+                            <Label Grid.Row="1" Grid.Column="2" Text="{Binding Tribe}"/>
+                            <Image Grid.Row="0" Grid.Column="0" Source="{Binding Images.4b9.jpg}" WidthRequest="200" HeightRequest="200" />
+                        </Grid>
+                   </StackLayout>
+                </Frame> 
+
+                  <!-- 予想配当　ランキング -->   
+                 <Frame OutlineColor="Blue">    
+                    <StackLayout Orientation="Vertical">
+                        <Grid HorizontalOptions="CenterAndExpand">
+                            <!-- 行の定義 -->
+                            <Grid.RowDefinitions Grid.RowSpan="0">
+                                <RowDefinition Height="50*"/>
+                                <RowDefinition Height="50*"/>    
+                            </Grid.RowDefinitions>
+                            <!-- 列の定義 -->
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                       
+                            <Label Grid.Row="0" Grid.Column="0" Text="予想配当" BackgroundColor="White"/>
+                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Subfamily}"/>
+                            <Label Grid.Row="0" Grid.Column="2" Text="{Binding Tribe}"/>
+                            <Label Grid.Row="1" Grid.Column="0" Text="{Binding Family}"/>
+                            <Label Grid.Row="1" Grid.Column="1" Text="{Binding Subfamily}"/>
+                            <Label Grid.Row="1" Grid.Column="2" Text="{Binding Tribe}"/>
+                            <Image Grid.Row="0" Grid.Column="0" Source="{Binding Images.4b9.jpg}" WidthRequest="200" HeightRequest="200" />
+                        </Grid>
+                   </StackLayout>
+                </Frame>        
+             </StackLayout>           
+            </ScrollView>    
+        </ContentPage>
+    </DataTemplate>
+  </TabbedPage.ItemTemplate>
+
+
+
+</TabbedPage>

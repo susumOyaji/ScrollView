@@ -12,6 +12,11 @@ namespace ScrollView
 		public MainPage()
 		{
 			InitializeComponent();
+
+            BarBackgroundColor = Color.FromHex("#1FBED6");
+            BarTextColor = Color.FromHex("#000000");
+
+            ItemsSource = MonkeyDataModel.All;
 		}
 
         public void OnClick(object sender, EventArgs e)
